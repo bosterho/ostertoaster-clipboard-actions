@@ -1,6 +1,6 @@
 -- @description Copy selected items names to clipboard (multiline)
 -- @author Ostertoaster
--- @version 1.1
+-- @version 1.2
 -- @provides clipboard_lib.lua
 -- @about
 --   Copies the take names of all selected media items to the system clipboard, one per line.

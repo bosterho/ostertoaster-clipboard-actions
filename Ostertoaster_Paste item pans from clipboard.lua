@@ -1,6 +1,6 @@
 -- @description Paste item pans from clipboard
 -- @author Ostertoaster
--- @version 1.1
+-- @version 1.2
 -- @provides clipboard_lib.lua
 -- @about
 --   Pastes pan values from clipboard (one per line) onto selected items' active takes.

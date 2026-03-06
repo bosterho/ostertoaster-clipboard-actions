@@ -1,6 +1,6 @@
 -- @description Insert items from clipboard (using filepath)
 -- @author Ostertoaster
--- @version 1.1
+-- @version 1.2
 -- @provides clipboard_lib.lua
 -- @about
 --   Inserts media items from comma-separated file paths in the clipboard.

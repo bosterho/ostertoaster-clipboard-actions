@@ -1,6 +1,6 @@
 -- @description Copy selected track names to clipboard
 -- @author Ostertoaster
--- @version 1.1
+-- @version 1.2
 -- @about
 --   Copies the names of all selected tracks to the clipboard, one per line.
 --   Requires SWS extension.

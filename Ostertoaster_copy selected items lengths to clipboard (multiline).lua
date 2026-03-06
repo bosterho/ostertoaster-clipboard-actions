@@ -1,6 +1,6 @@
 -- @description Copy selected items lengths to clipboard (multiline)
 -- @author Ostertoaster
--- @version 1.1
+-- @version 1.2
 -- @provides clipboard_lib.lua
 -- @about
 --   Copies the length (in seconds) of all selected media items to the clipboard, one per line.

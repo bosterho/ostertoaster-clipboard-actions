@@ -1,6 +1,6 @@
 -- @description Copy selected items positions to clipboard (multiline)
 -- @author Ostertoaster
--- @version 1.1
+-- @version 1.2
 -- @provides clipboard_lib.lua
 -- @about
 --   Copies the position (in seconds) of all selected media items to the clipboard, one per line.

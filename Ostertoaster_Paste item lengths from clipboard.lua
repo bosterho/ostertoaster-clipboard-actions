@@ -1,6 +1,6 @@
 -- @description Paste item lengths from clipboard
 -- @author Ostertoaster
--- @version 1.1
+-- @version 1.2
 -- @provides clipboard_lib.lua
 -- @about
 --   Pastes lengths from clipboard (one per line) onto selected items. Values wrap if more items than lines.

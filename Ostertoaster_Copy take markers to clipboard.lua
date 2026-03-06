@@ -1,6 +1,6 @@
 -- @description Copy take markers to clipboard
 -- @author Ostertoaster
--- @version 1.1
+-- @version 1.2
 -- @about
 --   Copies the positions of all take markers from the first selected item to the clipboard.
 --   Requires SWS extension.

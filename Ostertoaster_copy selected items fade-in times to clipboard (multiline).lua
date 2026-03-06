@@ -1,6 +1,6 @@
 -- @description Copy selected items fade-in times to clipboard (multiline)
 -- @author Ostertoaster
--- @version 1.1
+-- @version 1.2
 -- @provides clipboard_lib.lua
 -- @about
 --   Copies the fade-in length of all selected media items to the clipboard, one per line.

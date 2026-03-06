@@ -9,6 +9,34 @@ function lib.split_str(s, delimiter)
   return result
 end
 
+-- Get clipboard lines, filtering out empty trailing entries
+function lib.get_clipboard_lines(delimiter)
+  delimiter = delimiter or "\n"
+  local raw = lib.split_str(reaper.CF_GetClipboard(), delimiter)
+  local lines = {}
+  for _, v in ipairs(raw) do
+    local trimmed = v:gsub("[\n\r]", "")
+    if trimmed ~= "" then
+      table.insert(lines, trimmed)
+    end
+  end
+  return lines
+end
+
+-- Log a warning if clipboard line count doesn't match target count
+function lib.log_mismatch(clipboard_count, target_count, script_name)
+  if clipboard_count ~= target_count then
+    reaper.ShowConsoleMsg(script_name .. ": clipboard has " .. clipboard_count
+      .. " values, but " .. target_count .. " items are selected.")
+    if target_count > clipboard_count then
+      reaper.ShowConsoleMsg(" Values will repeat (wrapping).")
+    else
+      reaper.ShowConsoleMsg(" Only the first " .. target_count .. " values will be used.")
+    end
+    reaper.ShowConsoleMsg("\n")
+  end
+end
+
 -- Copy a simple item property (D_POSITION, D_LENGTH, D_VOL, D_FADEINLEN, D_FADEOUTLEN, D_SNAPOFFSET)
 function lib.copy_item_property(key, script_name)
   reaper.Undo_BeginBlock()
@@ -51,8 +79,10 @@ end
 -- Paste a simple item property from clipboard
 function lib.paste_item_property(key, script_name)
   reaper.Undo_BeginBlock()
-  local lines = lib.split_str(reaper.CF_GetClipboard(), "\n")
-  for i = 0, reaper.CountSelectedMediaItems(0) - 1 do
+  local lines = lib.get_clipboard_lines()
+  local num_items = reaper.CountSelectedMediaItems(0)
+  lib.log_mismatch(#lines, num_items, script_name)
+  for i = 0, num_items - 1 do
     local item = reaper.GetSelectedMediaItem(0, i)
     local val = tonumber(lines[(i % #lines) + 1])
     if val ~= nil then
@@ -65,8 +95,10 @@ end
 -- Paste a take-level property from clipboard
 function lib.paste_take_property(key, script_name)
   reaper.Undo_BeginBlock()
-  local lines = lib.split_str(reaper.CF_GetClipboard(), "\n")
-  for i = 0, reaper.CountSelectedMediaItems(0) - 1 do
+  local lines = lib.get_clipboard_lines()
+  local num_items = reaper.CountSelectedMediaItems(0)
+  lib.log_mismatch(#lines, num_items, script_name)
+  for i = 0, num_items - 1 do
     local item = reaper.GetSelectedMediaItem(0, i)
     local take = reaper.GetActiveTake(item)
     local val = tonumber(lines[(i % #lines) + 1])

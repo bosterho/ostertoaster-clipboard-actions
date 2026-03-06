@@ -1,6 +1,6 @@
 -- @description Copy selected items pans to clipboard (multiline)
 -- @author Ostertoaster
--- @version 1.1
+-- @version 1.2
 -- @provides clipboard_lib.lua
 -- @about
 --   Copies the pan value of all selected media item takes to the clipboard, one per line.

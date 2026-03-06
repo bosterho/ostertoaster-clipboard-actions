@@ -1,6 +1,6 @@
 -- @description Copy take sources to clipboard
 -- @author Ostertoaster
--- @version 1.1
+-- @version 1.2
 -- @about
 --   Copies the source file paths of all selected items to the clipboard. Handles reversed takes.
 --   Does not work on looped items. Requires SWS extension.
