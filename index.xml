@@ -34,6 +34,15 @@
         <source file="clipboard_lib.lua">https://raw.githubusercontent.com/bosterho/ostertoaster-clipboard-actions/master/clipboard_lib.lua</source>
       </version>
     </reapack>
+    <reapack name="Ostertoaster_Paste item names from clipboard.lua" type="script" desc="Paste item names from clipboard">
+      <metadata>
+        <description><![CDATA[Pastes names from clipboard (one per line) onto selected items' active takes. Values wrap if more items than lines. Requires SWS extension.]]></description>
+      </metadata>
+      <version name="1.2" author="Ostertoaster" time="2026-03-06">
+        <source main="main">https://raw.githubusercontent.com/bosterho/ostertoaster-clipboard-actions/master/Ostertoaster_Paste%20item%20names%20from%20clipboard.lua</source>
+        <source file="clipboard_lib.lua">https://raw.githubusercontent.com/bosterho/ostertoaster-clipboard-actions/master/clipboard_lib.lua</source>
+      </version>
+    </reapack>
     <reapack name="Ostertoaster_Paste item pans from clipboard.lua" type="script" desc="Paste item pans from clipboard">
       <metadata>
         <description><![CDATA[Pastes pan values from clipboard (one per line) onto selected items' active takes. Requires SWS extension.]]></description>
