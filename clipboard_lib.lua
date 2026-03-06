@@ -80,6 +80,11 @@ end
 function lib.paste_item_property(key, script_name)
   reaper.Undo_BeginBlock()
   local lines = lib.get_clipboard_lines()
+  if #lines == 0 then
+    reaper.ShowConsoleMsg(script_name .. ": clipboard is empty.\n")
+    reaper.Undo_EndBlock(script_name, -1)
+    return
+  end
   local num_items = reaper.CountSelectedMediaItems(0)
   lib.log_mismatch(#lines, num_items, script_name)
   for i = 0, num_items - 1 do
@@ -96,6 +101,11 @@ end
 function lib.paste_take_property(key, script_name)
   reaper.Undo_BeginBlock()
   local lines = lib.get_clipboard_lines()
+  if #lines == 0 then
+    reaper.ShowConsoleMsg(script_name .. ": clipboard is empty.\n")
+    reaper.Undo_EndBlock(script_name, -1)
+    return
+  end
   local num_items = reaper.CountSelectedMediaItems(0)
   lib.log_mismatch(#lines, num_items, script_name)
   for i = 0, num_items - 1 do
@@ -113,6 +123,11 @@ end
 function lib.paste_take_names(script_name)
   reaper.Undo_BeginBlock()
   local lines = lib.get_clipboard_lines()
+  if #lines == 0 then
+    reaper.ShowConsoleMsg(script_name .. ": clipboard is empty.\n")
+    reaper.Undo_EndBlock(script_name, -1)
+    return
+  end
   local num_items = reaper.CountSelectedMediaItems(0)
   lib.log_mismatch(#lines, num_items, script_name)
   for i = 0, num_items - 1 do

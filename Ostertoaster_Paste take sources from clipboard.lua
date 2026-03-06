@@ -9,6 +9,11 @@
 local lib = dofile(debug.getinfo(1, 'S').source:match[[^@?(.*[\/])[^\/]-$]] .. 'clipboard_lib.lua')
 reaper.Undo_BeginBlock()
 local lines = lib.get_clipboard_lines()
+if #lines == 0 then
+  reaper.ShowConsoleMsg("Paste take sources from clipboard: clipboard is empty.\n")
+  reaper.Undo_EndBlock("Paste take sources from clipboard", -1)
+  return
+end
 local num_items = reaper.CountSelectedMediaItems(0)
 lib.log_mismatch(#lines, num_items, "Paste take sources from clipboard")
 for i = 0, num_items - 1 do

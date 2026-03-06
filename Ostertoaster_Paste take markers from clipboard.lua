@@ -9,6 +9,11 @@
 local lib = dofile(debug.getinfo(1, 'S').source:match[[^@?(.*[\/])[^\/]-$]] .. 'clipboard_lib.lua')
 reaper.Undo_BeginBlock()
 local lines = lib.get_clipboard_lines()
+if #lines == 0 then
+  reaper.ShowConsoleMsg("Paste take markers from clipboard: clipboard is empty.\n")
+  reaper.Undo_EndBlock("Paste take markers from clipboard", -1)
+  return
+end
 local take = reaper.GetActiveTake(reaper.GetSelectedMediaItem(0, 0))
 local num_existing = reaper.GetNumTakeMarkers(take)
 if #lines ~= num_existing and num_existing > 0 then
