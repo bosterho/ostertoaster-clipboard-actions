@@ -6,5 +6,5 @@
 --   Pastes lengths from clipboard (one per line) onto selected items. Values wrap if more items than lines.
 --   Requires SWS extension.
 
-local lib = dofile(({reaper.get_action_context()})[2]:match("^(.*[/\\])") .. "clipboard_lib.lua")
+local lib = dofile(debug.getinfo(1, 'S').source:match[[^@?(.*[\/])[^\/]-$]] .. 'clipboard_lib.lua')
 lib.paste_item_property("D_LENGTH", "Paste item lengths from clipboard")

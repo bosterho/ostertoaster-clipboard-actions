@@ -6,5 +6,5 @@
 --   Copies the take names of all selected media items to the system clipboard, one per line.
 --   Requires SWS extension.
 
-local lib = dofile(({reaper.get_action_context()})[2]:match("^(.*[/\\])") .. "clipboard_lib.lua")
+local lib = dofile(debug.getinfo(1, 'S').source:match[[^@?(.*[\/])[^\/]-$]] .. 'clipboard_lib.lua')
 lib.copy_take_names("Copy selected items names to clipboard")

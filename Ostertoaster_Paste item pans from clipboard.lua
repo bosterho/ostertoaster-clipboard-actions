@@ -6,5 +6,5 @@
 --   Pastes pan values from clipboard (one per line) onto selected items' active takes.
 --   Requires SWS extension.
 
-local lib = dofile(({reaper.get_action_context()})[2]:match("^(.*[/\\])") .. "clipboard_lib.lua")
+local lib = dofile(debug.getinfo(1, 'S').source:match[[^@?(.*[\/])[^\/]-$]] .. 'clipboard_lib.lua')
 lib.paste_take_property("D_PAN", "Paste item pans from clipboard")

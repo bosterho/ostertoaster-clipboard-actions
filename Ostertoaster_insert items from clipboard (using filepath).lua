@@ -6,7 +6,7 @@
 --   Inserts media items from comma-separated file paths in the clipboard.
 --   Requires SWS extension.
 
-local lib = dofile(({reaper.get_action_context()})[2]:match("^(.*[/\\])") .. "clipboard_lib.lua")
+local lib = dofile(debug.getinfo(1, 'S').source:match[[^@?(.*[\/])[^\/]-$]] .. 'clipboard_lib.lua')
 local paths = lib.split_str(reaper.CF_GetClipboard(), ",")
 for _, path in ipairs(paths) do
   reaper.InsertMedia(path, 1)
