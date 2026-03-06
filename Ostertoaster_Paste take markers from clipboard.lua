@@ -6,7 +6,7 @@
 --   Pastes take marker positions from clipboard onto the first selected item's active take.
 --   Requires SWS extension.
 
-local lib = dofile(({reaper.get_action_context()})[2]:match("^(.*[/\])") .. "clipboard_lib.lua")
+local lib = dofile(({reaper.get_action_context()})[2]:match("^(.*[/\\])") .. "clipboard_lib.lua")
 reaper.Undo_BeginBlock()
 local lines = lib.get_clipboard_lines()
 local take = reaper.GetActiveTake(reaper.GetSelectedMediaItem(0, 0))

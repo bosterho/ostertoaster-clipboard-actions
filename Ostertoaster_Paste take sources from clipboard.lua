@@ -6,7 +6,7 @@
 --   Pastes source file paths from clipboard onto selected items. Does not work on reversed items.
 --   Requires SWS extension.
 
-local lib = dofile(({reaper.get_action_context()})[2]:match("^(.*[/\])") .. "clipboard_lib.lua")
+local lib = dofile(({reaper.get_action_context()})[2]:match("^(.*[/\\])") .. "clipboard_lib.lua")
 reaper.Undo_BeginBlock()
 local lines = lib.get_clipboard_lines()
 local num_items = reaper.CountSelectedMediaItems(0)
