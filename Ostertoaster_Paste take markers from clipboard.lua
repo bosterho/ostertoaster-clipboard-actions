@@ -1,33 +1,19 @@
 -- @description Paste take markers from clipboard
 -- @author Ostertoaster
--- @version 1.0
+-- @version 1.1
+-- @provides clipboard_lib.lua
 -- @about
 --   Pastes take marker positions from clipboard onto the first selected item's active take.
 --   Requires SWS extension.
 
-reaper.ClearConsole()
+local lib = dofile(({reaper.get_action_context()})[2]:match("^(.*[/\\])") .. "clipboard_lib.lua")
 reaper.Undo_BeginBlock()
-
-function split_str(s, delimiter)
-  result = {}
-  for match in (s..delimiter):gmatch('(.-)'..delimiter) do
-      table.insert(result, match)
-  end
-  return result
-end
-
-
-clipboard_lines = split_str(reaper.CF_GetClipboard(), "\n")
-
-name = ""
-take = reaper.GetActiveTake(reaper.GetSelectedMediaItem(0, 0))
-for m = 0, #clipboard_lines - 1 do
-  line_index = (m % #clipboard_lines) + 1
-  pos = tonumber(clipboard_lines[line_index])
+local lines = lib.split_str(reaper.CF_GetClipboard(), "\n")
+local take = reaper.GetActiveTake(reaper.GetSelectedMediaItem(0, 0))
+for m = 0, #lines - 1 do
+  local pos = tonumber(lines[(m % #lines) + 1])
   if pos ~= nil then
-    retval, name, color = reaper.SetTakeMarker(take, m, "", pos)
-    -- reaper.SetMediaItemInfo_Value(item, "D_LENGTH", length)
+    reaper.SetTakeMarker(take, m, "", pos)
   end
 end
-
-reaper.Undo_EndBlock("Paste item markers from clipboard", 0)
+reaper.Undo_EndBlock("Paste take markers from clipboard", 0)

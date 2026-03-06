@@ -1,23 +1,10 @@
 -- @description Copy selected items lengths to clipboard (multiline)
 -- @author Ostertoaster
--- @version 1.0
+-- @version 1.1
+-- @provides clipboard_lib.lua
 -- @about
 --   Copies the length (in seconds) of all selected media items to the clipboard, one per line.
 --   Requires SWS extension.
 
-script_name = 'copy selected items lengths to clipboard (multiline)'
-reaper.Undo_BeginBlock();
-selected_items = {}
-num_selected_items = reaper.CountSelectedMediaItems(-1)
-for i = 0, num_selected_items-1 do
-  selected_items[i] = reaper.GetSelectedMediaItem(-1, i)
-end
-
-clipboard_str = ""
-for i = 0, num_selected_items-1 do
-  local value = reaper.GetMediaItemInfo_Value(selected_items[i], "D_LENGTH")
-  clipboard_str = clipboard_str .. value .. "\n"
-end
-reaper.CF_SetClipboard(clipboard_str)
-reaper.Undo_EndBlock(script_name,-1);
-
+local lib = dofile(({reaper.get_action_context()})[2]:match("^(.*[/\\])") .. "clipboard_lib.lua")
+lib.copy_item_property("D_LENGTH", "Copy selected items lengths to clipboard")
