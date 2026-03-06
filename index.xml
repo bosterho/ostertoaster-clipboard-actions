@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<index version="1" name="Ostertoaster Clipboard Actions">
+  <category name="Clipboard Actions">
+    <reapack name="Ostertoaster_Copy selected track names to clipboard.lua" type="script" desc="Copy selected track names to clipboard">
+      <metadata>
+        <description><![CDATA[Copies the names of all selected tracks to the clipboard, one per line. Requires SWS extension.]]></description>
+      </metadata>
+      <version name="1.0" author="Ostertoaster" time="2026-03-06">
+        <source main="main">https://raw.githubusercontent.com/bosterho/ostertoaster-clipboard-actions/master/Ostertoaster_Copy%20selected%20track%20names%20to%20clipboard.lua</source>
+      </version>
+    </reapack>
+    <reapack name="Ostertoaster_Copy take markers to clipboard.lua" type="script" desc="Copy take markers to clipboard">
+      <metadata>
+        <description><![CDATA[Copies the positions of all take markers from the first selected item to the clipboard. Requires SWS extension.]]></description>
+      </metadata>
+      <version name="1.0" author="Ostertoaster" time="2026-03-06">
+        <source main="main">https://raw.githubusercontent.com/bosterho/ostertoaster-clipboard-actions/master/Ostertoaster_Copy%20take%20markers%20to%20clipboard.lua</source>
+      </version>
+    </reapack>
+    <reapack name="Ostertoaster_Copy take sources to clipboard.lua" type="script" desc="Copy take sources to clipboard">
+      <metadata>
+        <description><![CDATA[Copies the source file paths of all selected items to the clipboard. Handles reversed takes. Requires SWS extension.]]></description>
+      </metadata>
+      <version name="1.0" author="Ostertoaster" time="2026-03-06">
+        <source main="main">https://raw.githubusercontent.com/bosterho/ostertoaster-clipboard-actions/master/Ostertoaster_Copy%20take%20sources%20to%20clipboard.lua</source>
+      </version>
+    </reapack>
+    <reapack name="Ostertoaster_Paste item lengths from clipboard.lua" type="script" desc="Paste item lengths from clipboard">
+      <metadata>
+        <description><![CDATA[Pastes lengths from clipboard (one per line) onto selected items. Values wrap if more items than lines. Requires SWS extension.]]></description>
+      </metadata>
+      <version name="1.0" author="Ostertoaster" time="2026-03-06">
+        <source main="main">https://raw.githubusercontent.com/bosterho/ostertoaster-clipboard-actions/master/Ostertoaster_Paste%20item%20lengths%20from%20clipboard.lua</source>
+      </version>
+    </reapack>
+    <reapack name="Ostertoaster_Paste item pans from clipboard.lua" type="script" desc="Paste item pans from clipboard">
+      <metadata>
+        <description><![CDATA[Pastes pan values from clipboard (one per line) onto selected items' active takes. Requires SWS extension.]]></description>
+      </metadata>
+      <version name="1.0" author="Ostertoaster" time="2026-03-06">
+        <source main="main">https://raw.githubusercontent.com/bosterho/ostertoaster-clipboard-actions/master/Ostertoaster_Paste%20item%20pans%20from%20clipboard.lua</source>
+      </version>
+    </reapack>
+    <reapack name="Ostertoaster_Paste take markers from clipboard.lua" type="script" desc="Paste take markers from clipboard">
+      <metadata>
+        <description><![CDATA[Pastes take marker positions from clipboard onto the first selected item's active take. Requires SWS extension.]]></description>
+      </metadata>
+      <version name="1.0" author="Ostertoaster" time="2026-03-06">
+        <source main="main">https://raw.githubusercontent.com/bosterho/ostertoaster-clipboard-actions/master/Ostertoaster_Paste%20take%20markers%20from%20clipboard.lua</source>
+      </version>
+    </reapack>
+    <reapack name="Ostertoaster_Paste take sources from clipboard.lua" type="script" desc="Paste take sources from clipboard">
+      <metadata>
+        <description><![CDATA[Pastes source file paths from clipboard onto selected items. Does not work on reversed items. Requires SWS extension.]]></description>
+      </metadata>
+      <version name="1.0" author="Ostertoaster" time="2026-03-06">
+        <source main="main">https://raw.githubusercontent.com/bosterho/ostertoaster-clipboard-actions/master/Ostertoaster_Paste%20take%20sources%20from%20clipboard.lua</source>
+      </version>
+    </reapack>
+    <reapack name="Ostertoaster_copy selected items fade-in times to clipboard (multiline).lua" type="script" desc="Copy selected items fade-in times to clipboard (multiline)">
+      <metadata>
+        <description><![CDATA[Copies the fade-in length of all selected media items to the clipboard, one per line. Requires SWS extension.]]></description>
+      </metadata>
+      <version name="1.0" author="Ostertoaster" time="2026-03-06">
+        <source main="main">https://raw.githubusercontent.com/bosterho/ostertoaster-clipboard-actions/master/Ostertoaster_copy%20selected%20items%20fade-in%20times%20to%20clipboard%20%28multiline%29.lua</source>
+      </version>
+    </reapack>
+    <reapack name="Ostertoaster_copy selected items fade-out times to clipboard (multiline).lua" type="script" desc="Copy selected items fade-out times to clipboard (multiline)">
+      <metadata>
+        <description><![CDATA[Copies the fade-out length of all selected media items to the clipboard, one per line. Requires SWS extension.]]></description>
+      </metadata>
+      <version name="1.0" author="Ostertoaster" time="2026-03-06">
+        <source main="main">https://raw.githubusercontent.com/bosterho/ostertoaster-clipboard-actions/master/Ostertoaster_copy%20selected%20items%20fade-out%20times%20to%20clipboard%20%28multiline%29.lua</source>
+      </version>
+    </reapack>
+    <reapack name="Ostertoaster_copy selected items lengths to clipboard (multiline).lua" type="script" desc="Copy selected items lengths to clipboard (multiline)">
+      <metadata>
+        <description><![CDATA[Copies the length (in seconds) of all selected media items to the clipboard, one per line. Requires SWS extension.]]></description>
+      </metadata>
+      <version name="1.0" author="Ostertoaster" time="2026-03-06">
+        <source main="main">https://raw.githubusercontent.com/bosterho/ostertoaster-clipboard-actions/master/Ostertoaster_copy%20selected%20items%20lengths%20to%20clipboard%20%28multiline%29.lua</source>
+      </version>
+    </reapack>
+    <reapack name="Ostertoaster_copy selected items names to clipboard (multiline).lua" type="script" desc="Copy selected items names to clipboard (multiline)">
+      <metadata>
+        <description><![CDATA[Copies the take names of all selected media items to the system clipboard, one per line. Requires SWS extension.]]></description>
+      </metadata>
+      <version name="1.0" author="Ostertoaster" time="2026-03-06">
+        <source main="main">https://raw.githubusercontent.com/bosterho/ostertoaster-clipboard-actions/master/Ostertoaster_copy%20selected%20items%20names%20to%20clipboard%20%28multiline%29.lua</source>
+      </version>
+    </reapack>
+    <reapack name="Ostertoaster_copy selected items pans to clipboard (multiline).lua" type="script" desc="Copy selected items pans to clipboard (multiline)">
+      <metadata>
+        <description><![CDATA[Copies the pan value of all selected media item takes to the clipboard, one per line. Requires SWS extension.]]></description>
+      </metadata>
+      <version name="1.0" author="Ostertoaster" time="2026-03-06">
+        <source main="main">https://raw.githubusercontent.com/bosterho/ostertoaster-clipboard-actions/master/Ostertoaster_copy%20selected%20items%20pans%20to%20clipboard%20%28multiline%29.lua</source>
+      </version>
+    </reapack>
+    <reapack name="Ostertoaster_copy selected items positions to clipboard (multiline).lua" type="script" desc="Copy selected items positions to clipboard (multiline)">
+      <metadata>
+        <description><![CDATA[Copies the position (in seconds) of all selected media items to the clipboard, one per line. Requires SWS extension.]]></description>
+      </metadata>
+      <version name="1.0" author="Ostertoaster" time="2026-03-06">
+        <source main="main">https://raw.githubusercontent.com/bosterho/ostertoaster-clipboard-actions/master/Ostertoaster_copy%20selected%20items%20positions%20to%20clipboard%20%28multiline%29.lua</source>
+      </version>
+    </reapack>
+    <reapack name="Ostertoaster_copy selected items snap offset to clipboard (multiline).lua" type="script" desc="Copy selected items snap offset to clipboard (multiline)">
+      <metadata>
+        <description><![CDATA[Copies the snap offset of all selected media items to the clipboard, one per line. Requires SWS extension.]]></description>
+      </metadata>
+      <version name="1.0" author="Ostertoaster" time="2026-03-06">
+        <source main="main">https://raw.githubusercontent.com/bosterho/ostertoaster-clipboard-actions/master/Ostertoaster_copy%20selected%20items%20snap%20offset%20to%20clipboard%20%28multiline%29.lua</source>
+      </version>
+    </reapack>
+    <reapack name="Ostertoaster_copy selected items volumes to clipboard (multiline).lua" type="script" desc="Copy selected items volumes to clipboard (multiline)">
+      <metadata>
+        <description><![CDATA[Copies the volume of all selected media items to the clipboard, one per line. Requires SWS extension.]]></description>
+      </metadata>
+      <version name="1.0" author="Ostertoaster" time="2026-03-06">
+        <source main="main">https://raw.githubusercontent.com/bosterho/ostertoaster-clipboard-actions/master/Ostertoaster_copy%20selected%20items%20volumes%20to%20clipboard%20%28multiline%29.lua</source>
+      </version>
+    </reapack>
+    <reapack name="Ostertoaster_insert items from clipboard (using filepath).lua" type="script" desc="Insert items from clipboard (using filepath)">
+      <metadata>
+        <description><![CDATA[Inserts media items from comma-separated file paths in the clipboard. Requires SWS extension.]]></description>
+      </metadata>
+      <version name="1.0" author="Ostertoaster" time="2026-03-06">
+        <source main="main">https://raw.githubusercontent.com/bosterho/ostertoaster-clipboard-actions/master/Ostertoaster_insert%20items%20from%20clipboard%20%28using%20filepath%29.lua</source>
+      </version>
+    </reapack>
+  </category>
+</index>
